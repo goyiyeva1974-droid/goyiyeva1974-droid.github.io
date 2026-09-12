@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Matteo el Loquendero</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: white;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff0000, #8b0000);
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      text-shadow: 3px 3px 0 #000;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    nav {
+      background: #151515;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff3333;
+    }
+
+    .hero {
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at center, #292929 0%, #0b0b0b 70%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cccccc;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 28px;
+      background: #ff0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #cc0000;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .about {
+      text-align: center;
+      color: #cccccc;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #171717;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #ff0000;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #ff3333;
+    }
+
+    .card p {
+      color: #bbbbbb;
+      line-height: 1.5;
+    }
+
+    .video-box {
+      background: #151515;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+
+    .video-box p {
+      color: #bbbbbb;
+      margin-bottom: 20px;
+    }
+
+    .social {
+      text-align: center;
+    }
+
+    footer {
+      background: #050505;
+      border-top: 1px solid #222;
+      padding: 30px 20px;
+      text-align: center;
+      color: #888;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎮 Matteo el Loquendero</h1>
+    <p>¡Bienvenido a mi página oficial!</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contenido">Contenido</a>
+    <a href="#youtube">YouTube</a>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <h2>🔥 ¡Bienvenido a Matteo el Loquendero! 🔥</h2>
+
+        <p>
+          Un sitio dedicado a mis vídeos, historias, Loquendo,
+          videojuegos, nostalgia y mucho más.
+        </p>
+
+        <a
+          class="button"
+          href="https://www.youtube.com/"
+          target="_blank"
+        >
+          ▶️ Ver mi canal
+        </a>
+      </div>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>👋 Sobre mí</h2>
+
+      <div class="about">
+        <p>
+          ¡Hola! Soy Matteo el Loquendero.
+        </p>
+
+        <p>
+          En este sitio podrás encontrar información sobre mi contenido,
+          mis vídeos y los proyectos que voy creando para YouTube.
+        </p>
+
+        <p>
+          ¡Gracias por visitar mi página! ❤️
+        </p>
+      </div>
+    </section>
+
+    <section id="contenido">
+      <h2>🎬 Mi contenido</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>🎙️ Loquendo</h3>
+          <p>
+            Vídeos y contenido utilizando voces Loquendo
+            con historias y situaciones divertidas.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🎮 Videojuegos</h3>
+          <p>
+            Contenido relacionado con videojuegos,
+            incluyendo GTA y otros clásicos.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>👻 Historias</h3>
+          <p>
+            Creepypastas, historias curiosas,
+            misterios y contenido para entretener.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🕰️ Nostalgia</h3>
+          <p>
+            Vídeos sobre recuerdos de la infancia,
+            colegio, videojuegos y momentos que muchos recuerdan.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="youtube">
+      <h2>▶️ Mi canal de YouTube</h2>
+
+      <div class="video-box">
+
+        <p>
+          ¡Visita mi canal para ver mis últimos vídeos!
+        </p>
+
+        <!--
+          CAMBIA EL ENLACE DE ABAJO POR EL ENLACE
+          REAL DE TU CANAL DE YOUTUBE.
+        -->
+
+        <a
+          class="button"
+          href="https://www.youtube.com/"
+          target="_blank"
+        >
+          🔴 Ir a YouTube
+        </a>
+
+      </div>
+    </section>
+
+    <section class="social">
+      <h2>📢 ¡Sígueme!</h2>
+
+      <p>
+        Suscríbete al canal y acompáñame en esta aventura.
+      </p>
+
+      <a
+        class="button"
+        href="https://www.youtube.com/"
+        target="_blank"
+      >
+        🔔 Suscribirme
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 <strong>Matteo el Loquendero</strong>
+    </p>
+
+    <p>
+      Página creada para el canal.
+    </p>
+  </footer>
+
+</body>
+  </html>
