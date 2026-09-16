@@ -1,0 +1,8 @@
+{$CLEO .csi}
+
+0000:
+
+wait 2000
+0125: add_char_to_gang $PLAYER_ACTOR 1
+
+end_thread
