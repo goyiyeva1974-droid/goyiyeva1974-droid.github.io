@@ -1,0 +1,43 @@
+name: Compilar CLEO CSI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar entorno
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git cmake g++ make
+
+      - name: Descargar gta3sc
+        run: |
+          git clone https://github.com/thelink2012/gta3sc.git
+          cd gta3sc
+          cmake -S . -B build
+          cmake --build build -j2
+
+      - name: Mostrar archivos
+        run: |
+          find . -maxdepth 3 -type f | sort
+
+      - name: Compilar
+        run: |
+          mkdir -p salida
+          ./gta3sc/build/gta3sc compile \
+            UNIRTE_A_LOS_BALLAS_v1.0.txt \
+            --config=gtasa \
+            --cs \
+            -o salida/UNIRTE_A_LOS_BALLAS_v1.0.csi
+
+      - name: Guardar CSI
+        uses: actions/upload-artifact@v4
+        with:
+          name: UNIRTE_A_LOS_BALLAS_v1.0
+          path: salida/UNIRTE_A_LOS_BALLAS_v1.0.csi
